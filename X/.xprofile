@@ -1,0 +1,6 @@
+xsetroot -cursor_name left_ptr
+
+# Set the background image
+if [ -f xbackground ]; then
+    feh --bg-scale xbackground &
+fi

@@ -15,6 +15,7 @@
  '(ivy-count-format "(%d/%d) ")
  '(ivy-mode t)
  '(ivy-use-virtual-buffers t)
+ '(markdown-command "pandoc -f markdown -t html")
  '(menu-bar-mode nil)
  '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
@@ -43,3 +44,12 @@
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
+;; Markdown configuration
+(require 'markdown-mode)
+(define-key markdown-mode-map (kbd "C-c m p") 'markdown-preview)
+(define-key markdown-mode-map (kbd "C-c m h 1") 'markdown-insert-header-atx-1)
+(define-key markdown-mode-map (kbd "C-c m h 2") 'markdown-insert-header-atx-2)
+(define-key markdown-mode-map (kbd "C-c m l") 'markdown-insert-link)
+(define-key markdown-mode-map (kbd "C-c m i") 'markdown-insert-italic)
+(define-key markdown-mode-map (kbd "C-c m b") 'markdown-insert-bold)

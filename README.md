@@ -13,3 +13,9 @@ above directory and executing `stow -t ~ <subdir>`. For example,
 executing `stow -t ~ emacs` will create symlinks to all emacs-related
 dotfiles in the home directory. Similarly, links can later be removed
 with `stow -t ~ -D <subdir>`.
+
+### X setup
+
+To set the desktop background to a given image, set up a symlink to
+ the image as `$HOME/xbackground`. The X configuration file
+ `.xprofile` will set the background to this image, where it exists.

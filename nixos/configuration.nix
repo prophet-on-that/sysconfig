@@ -36,7 +36,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (import /etc/nixos/emacs.nix { inherit pkgs; })
+    (import ./emacs.nix { inherit pkgs; })
     git
     tmux
     dmenu

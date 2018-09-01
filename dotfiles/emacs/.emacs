@@ -54,3 +54,7 @@
 (define-key markdown-mode-map (kbd "C-c m l") 'markdown-insert-link)
 (define-key markdown-mode-map (kbd "C-c m i") 'markdown-insert-italic)
 (define-key markdown-mode-map (kbd "C-c m b") 'markdown-insert-bold)
+
+;; Projectile configuration
+(projectile-global-mode)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)

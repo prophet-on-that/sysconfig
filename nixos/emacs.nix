@@ -12,4 +12,5 @@ in
     swiper
     ivy
     markdown-mode
+    projectile
   ]))

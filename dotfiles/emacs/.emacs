@@ -10,6 +10,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(counsel-projectile-mode t nil (counsel-projectile))
  '(inhibit-startup-screen t)
  '(initial-buffer-choice (quote eshell))
  '(ivy-count-format "(%d/%d) ")
@@ -17,6 +18,8 @@
  '(ivy-use-virtual-buffers t)
  '(markdown-command "pandoc -f markdown -t html")
  '(menu-bar-mode nil)
+ '(projectile-completion-system (quote ivy))
+ '(projectile-use-git-grep t)
  '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
  '(tab-width 2)
@@ -56,5 +59,4 @@
 (define-key markdown-mode-map (kbd "C-c m b") 'markdown-insert-bold)
 
 ;; Projectile configuration
-(projectile-global-mode)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)

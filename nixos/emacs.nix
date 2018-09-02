@@ -13,4 +13,5 @@ in
     ivy
     markdown-mode
     projectile
+    counsel-projectile
   ]))

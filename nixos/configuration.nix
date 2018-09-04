@@ -140,10 +140,4 @@
   # servers. You should change this only after NixOS release notes say you
   # should.
   system.stateVersion = "18.03"; # Did you read the comment?
-
-  # fileSystems."/host" = {
-  #   fsType = "vboxsf";
-  #   device = "share";
-  #   options = [ "rw" ];
-  # };
 }

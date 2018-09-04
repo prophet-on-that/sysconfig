@@ -11,11 +11,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(counsel-projectile-mode t nil (counsel-projectile))
+ '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice (quote eshell))
  '(ivy-count-format "(%d/%d) ")
  '(ivy-mode t)
  '(ivy-use-virtual-buffers t)
+ '(js-curly-indent-offset 2)
+ '(js-enabled-frameworks (quote (javascript)))
+ '(js-expr-indent-offset 2)
+ '(js-indent-level 2)
+ '(js-paren-indent-offset 2)
+ '(js-square-indent-offset 2)
  '(markdown-command "pandoc -f markdown -t html")
  '(menu-bar-mode nil)
  '(projectile-completion-system (quote ivy))

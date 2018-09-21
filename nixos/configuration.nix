@@ -129,6 +129,12 @@
 
   security.sudo.wheelNeedsPassword = false;
 
+  services.emacs = {
+    enable = true;
+    package = import ./emacs.nix { pkgs = pkgs; };
+    defaultEditor = true;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   # users.extraUsers.guest = {
   #   isNormalUser = true;

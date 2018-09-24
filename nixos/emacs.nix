@@ -14,4 +14,6 @@ in
     markdown-mode
     projectile
     counsel-projectile
+    paredit
+    geiser
   ]))

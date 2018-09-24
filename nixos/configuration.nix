@@ -50,6 +50,7 @@
     stow
     firefox
     pandoc
+    guile
 
     # Haskell packages
     haskellPackages.xmonad

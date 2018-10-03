@@ -29,6 +29,8 @@
  '(projectile-use-git-grep t)
  '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
+ '(show-paren-delay 0)
+ '(show-paren-mode t)
  '(tab-width 2)
  '(tool-bar-mode nil))
 (custom-set-faces

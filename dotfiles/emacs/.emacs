@@ -79,3 +79,8 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook #'enable-paredit-mode)
 (add-hook 'geiser-repl-mode-hook #'enable-paredit-mode)
+
+;; Load system-local configuration, if it exists
+(let ((local-config-file "~/.emacs-local.el"))
+  (if (file-exists-p local-config-file)
+      (load local-config-file)))

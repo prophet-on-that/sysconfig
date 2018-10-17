@@ -25,6 +25,17 @@
  '(js-square-indent-offset 2)
  '(markdown-command "pandoc -f markdown -t html")
  '(menu-bar-mode nil)
+ '(org-agenda-span 7)
+ '(org-agenda-start-on-weekday nil)
+ '(org-agenda-start-with-follow-mode t)
+ '(org-deadline-warning-days 2)
+ '(org-log-done (quote note))
+ '(org-log-into-drawer t)
+ '(org-tags-column 90)
+ '(org-todo-keyword-faces (quote (("ASSIGNED" . "goldenrod3"))))
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(t!/!)" "ASSIGNED(a@/!)" "DONE(d@)"))))
  '(projectile-completion-system (quote ivy))
  '(projectile-use-git-grep t)
  '(ring-bell-function (quote ignore))
@@ -79,6 +90,36 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook #'enable-paredit-mode)
 (add-hook 'geiser-repl-mode-hook #'enable-paredit-mode)
+
+;; Org mode
+(require 'org)
+(setq org-agenda-files (list org-directory))
+(global-set-key "\C-coc" 'org-capture)
+(global-set-key "\C-coa" 'org-agenda)
+(setq org-agenda-include-diary t)
+(setq org-agenda-start-day "-1d")
+
+(defun org-insert-current-time-stamp (with-hm)
+   "Insert the current time as an inactive org timestamp. WITH-HM
+means user the stamp format that includes the time of day."
+   (org-insert-time-stamp (current-time) with-hm t))
+(define-key org-mode-map (kbd "C-c t")
+  (lambda ()
+    (interactive)
+    (org-insert-current-time-stamp nil)))
+(define-key org-mode-map (kbd "C-c T")
+  (lambda ()
+    (interactive)
+    (org-insert-current-time-stamp t)))
+
+(defun org-agenda-diary-cleanup-desc ()
+  "Remove description included by default in org agenda diary
+  entry."
+  (goto-char (point-min))
+  (while (re-search-forward "; Desc: [^\"]*" nil t)
+    (replace-match "")))
+
+(add-hook 'org-agenda-cleanup-fancy-diary-hook 'org-agenda-diary-cleanup-desc)
 
 ;; Load system-local configuration, if it exists
 (let ((local-config-file "~/.emacs-local.el"))

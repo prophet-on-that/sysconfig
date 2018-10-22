@@ -52,6 +52,10 @@
     pandoc
     guile
 
+    aspell
+    aspellDicts.en
+    aspellDicts.en-computers
+
     # Haskell packages
     haskellPackages.xmonad
     haskellPackages.xmobar

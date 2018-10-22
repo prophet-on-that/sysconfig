@@ -11,6 +11,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(counsel-projectile-mode t nil (counsel-projectile))
+ '(geiser-active-implementations (quote (guile)))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice (quote eshell))

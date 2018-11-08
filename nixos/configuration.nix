@@ -51,6 +51,7 @@
     firefox
     pandoc
     guile
+    unzip
 
     aspell
     aspellDicts.en

@@ -13,6 +13,7 @@
  '(counsel-projectile-mode t nil (counsel-projectile))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(geiser-active-implementations (quote (guile)))
+ '(geiser-guile-load-init-file-p t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice (quote eshell))

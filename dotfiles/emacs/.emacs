@@ -46,7 +46,8 @@
  '(show-paren-delay 0)
  '(show-paren-mode t)
  '(tab-width 2)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(vc-handled-backends nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

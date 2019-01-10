@@ -16,4 +16,5 @@ in
     counsel-projectile
     paredit
     geiser
+    yaml-mode
   ]))

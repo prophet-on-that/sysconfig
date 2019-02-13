@@ -52,6 +52,7 @@
     pandoc
     guile
     unzip
+    jq
 
     aspell
     aspellDicts.en

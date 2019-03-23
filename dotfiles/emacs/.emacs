@@ -63,7 +63,7 @@
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 (global-set-key (kbd "C-h l") 'counsel-find-library)
 (global-set-key (kbd "C-h u") 'counsel-unicode-char)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f5>") 'ivy-resume)
 
 ;; Custom keybindings
 (global-set-key (kbd "C-c r") 'replace-string)

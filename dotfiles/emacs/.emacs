@@ -16,7 +16,7 @@
  '(geiser-guile-load-init-file-p t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(initial-buffer-choice (quote eshell))
+ '(initial-buffer-choice (quote shell))
  '(ivy-count-format "(%d/%d) ")
  '(ivy-mode t)
  '(ivy-use-virtual-buffers t)

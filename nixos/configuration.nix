@@ -29,9 +29,12 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Select internationalisation properties.
+  console = {
+    keyMap = "uk";
+  };
   i18n = {
     # consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "uk";
+    # consoleKeyMap = "uk"; Moved in 20.03.
     defaultLocale = "en_GB.UTF-8";
   };
 
@@ -52,7 +55,6 @@
     pandoc
     guile
     unzip
-    jq
 
     aspell
     aspellDicts.en
@@ -116,15 +118,8 @@
       ];
     };
     
-    windowManager.default = "xmonad";
     desktopManager.xterm.enable = false;
-    desktopManager.default = "none";
-    displayManager = {
-      slim = {
-        enable = true;
-	      defaultUser = "alex";
-      };
-    };
+    displayManager.defaultSession = "none+xmonad";
   };
 
   users.users.alex = {
